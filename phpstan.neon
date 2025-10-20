@@ -5,4 +5,4 @@ parameters:
     level: 7
     reportUnmatchedIgnoredErrors: false
     excludePaths:
-        - '%rootDir%/../../../vendor/spryker/spryker/Bundles/ConfigurableBundlePageSearch/src/Spryker/Client/ConfigurableBundlePageSearch/Plugin/Elasticsearch/Query/ConfigurableBundleTemplatePageSearchQueryPlugin.php'
+        - '%rootDir%/../../../src/Spryker/ConfigurableBundlePageSearch/src/Spryker/Client/ConfigurableBundlePageSearch/Plugin/Elasticsearch/Query/ConfigurableBundleTemplatePageSearchQueryPlugin.php'
