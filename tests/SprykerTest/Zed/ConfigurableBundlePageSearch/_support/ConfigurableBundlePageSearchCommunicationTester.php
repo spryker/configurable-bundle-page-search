@@ -118,20 +118,14 @@ class ConfigurableBundlePageSearchCommunicationTester extends Actor
      */
     public function setDependencies(): void
     {
-        $this->setQueueAdaptersDependency();
-        $this->setSearchPageMapPluginsDependency();
-    }
-
-    /**
-     * @return void
-     */
-    protected function setQueueAdaptersDependency(): void
-    {
         $this->setDependency(QueueDependencyProvider::QUEUE_ADAPTERS, function (Container $container) {
             return [
                 $container->getLocator()->rabbitMq()->client()->createQueueAdapter(),
+                $container->getLocator()->symfonyMessenger()->client()->createQueueAdapter(),
             ];
         });
+
+        $this->setSearchPageMapPluginsDependency();
     }
 
     /**
