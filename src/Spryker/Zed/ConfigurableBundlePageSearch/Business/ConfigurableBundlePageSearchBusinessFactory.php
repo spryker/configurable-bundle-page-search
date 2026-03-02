@@ -32,9 +32,6 @@ use Spryker\Zed\Kernel\Business\AbstractBusinessFactory;
  */
 class ConfigurableBundlePageSearchBusinessFactory extends AbstractBusinessFactory
 {
-    /**
-     * @return \Spryker\Zed\ConfigurableBundlePageSearch\Business\Publisher\ConfigurableBundleTemplatePublisherInterface
-     */
     public function createConfigurableBundleTemplatePublisher(): ConfigurableBundleTemplatePublisherInterface
     {
         return new ConfigurableBundleTemplatePublisher(
@@ -46,9 +43,6 @@ class ConfigurableBundlePageSearchBusinessFactory extends AbstractBusinessFactor
         );
     }
 
-    /**
-     * @return \Spryker\Zed\ConfigurableBundlePageSearch\Business\Unpublisher\ConfigurableBundleTemplateUnpublisherInterface
-     */
     public function createConfigurableBundleTemplateUnpublisher(): ConfigurableBundleTemplateUnpublisherInterface
     {
         return new ConfigurableBundleTemplateUnpublisher(
@@ -57,9 +51,6 @@ class ConfigurableBundlePageSearchBusinessFactory extends AbstractBusinessFactor
         );
     }
 
-    /**
-     * @return \Spryker\Zed\ConfigurableBundlePageSearch\Business\Mapper\ConfigurableBundleTemplatePageSearchMapperInterface
-     */
     public function createConfigurableBundlePageSearchMapper(): ConfigurableBundleTemplatePageSearchMapperInterface
     {
         return new ConfigurableBundleTemplatePageSearchMapper(
@@ -69,9 +60,6 @@ class ConfigurableBundlePageSearchBusinessFactory extends AbstractBusinessFactor
         );
     }
 
-    /**
-     * @return \Spryker\Zed\ConfigurableBundlePageSearch\Business\Expander\ConfigurableBundleTemplatePageSearchExpanderInterface
-     */
     public function createConfigurableBundleTemplatePageSearchExpander(): ConfigurableBundleTemplatePageSearchExpanderInterface
     {
         return new ConfigurableBundleTemplatePageSearchExpander(
@@ -80,25 +68,16 @@ class ConfigurableBundlePageSearchBusinessFactory extends AbstractBusinessFactor
         );
     }
 
-    /**
-     * @return \Spryker\Zed\ConfigurableBundlePageSearch\Dependency\Facade\ConfigurableBundlePageSearchToConfigurableBundleFacadeInterface
-     */
     public function getConfigurableBundleFacade(): ConfigurableBundlePageSearchToConfigurableBundleFacadeInterface
     {
         return $this->getProvidedDependency(ConfigurableBundlePageSearchDependencyProvider::FACADE_CONFIGURABLE_BUNDLE);
     }
 
-    /**
-     * @return \Spryker\Zed\ConfigurableBundlePageSearch\Dependency\Facade\ConfigurableBundlePageSearchToProductImageFacadeInterface
-     */
     public function getProductImageFacade(): ConfigurableBundlePageSearchToProductImageFacadeInterface
     {
         return $this->getProvidedDependency(ConfigurableBundlePageSearchDependencyProvider::FACADE_PRODUCT_IMAGE);
     }
 
-    /**
-     * @return \Spryker\Zed\ConfigurableBundlePageSearch\Dependency\Service\ConfigurableBundlePageSearchToUtilEncodingServiceInterface
-     */
     public function getUtilEncodingService(): ConfigurableBundlePageSearchToUtilEncodingServiceInterface
     {
         return $this->getProvidedDependency(ConfigurableBundlePageSearchDependencyProvider::SERVICE_UTIL_ENCODING);
@@ -112,9 +91,6 @@ class ConfigurableBundlePageSearchBusinessFactory extends AbstractBusinessFactor
         return $this->getProvidedDependency(ConfigurableBundlePageSearchDependencyProvider::PLUGINS_CONFIGURABLE_BUNDLE_TEMPLATE_PAGE_DATA_EXPANDER);
     }
 
-    /**
-     * @return \Spryker\Zed\ConfigurableBundlePageSearch\Business\Search\DataMapper\ConfigurableBundlePageSearchDataMapperInterface
-     */
     public function createConfigurableBundlePageSearchDataMapper(): ConfigurableBundlePageSearchDataMapperInterface
     {
         return new ConfigurableBundlePageSearchDataMapper(
@@ -131,9 +107,6 @@ class ConfigurableBundlePageSearchBusinessFactory extends AbstractBusinessFactor
         return $this->getProvidedDependency(ConfigurableBundlePageSearchDependencyProvider::PLUGINS_CONFIGURABLE_BUNDLE_TEMPLATE_MAP_EXPANDER);
     }
 
-    /**
-     * @return \Laminas\Filter\FilterInterface
-     */
     public function createUnderscoreToDashFilter(): FilterInterface
     {
         return new UnderscoreToDash();

@@ -25,9 +25,6 @@ use Generated\Shared\Transfer\FilterTransfer;
  */
 class ConfigurableBundlePageSearchFacadeTest extends Unit
 {
-    /**
-     * @return void
-     */
     protected function setUp(): void
     {
         parent::setUp();
@@ -39,9 +36,6 @@ class ConfigurableBundlePageSearchFacadeTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     public function testPublishConfigurableBundleTemplatesPublishesActiveTemplateData(): void
     {
         // Arrange
@@ -68,9 +62,6 @@ class ConfigurableBundlePageSearchFacadeTest extends Unit
         }
     }
 
-    /**
-     * @return void
-     */
     public function testPublishConfigurableBundleTemplatesUnpublishesInactiveTemplateData(): void
     {
         // Arrange
@@ -93,9 +84,6 @@ class ConfigurableBundlePageSearchFacadeTest extends Unit
         $this->assertCount(0, $configurableBundleTemplatePageSearchCollectionTransfer->getConfigurableBundleTemplatePageSearches());
     }
 
-    /**
-     * @return void
-     */
     public function testUnpublishConfigurableBundleTemplatesUnpublishesData(): void
     {
         // Arrange
@@ -115,9 +103,6 @@ class ConfigurableBundlePageSearchFacadeTest extends Unit
         $this->assertCount(0, $configurableBundleTemplatePageSearchCollectionTransfer->getConfigurableBundleTemplatePageSearches());
     }
 
-    /**
-     * @return void
-     */
     public function testGetConfigurableBundleTemplateCollectionWillReturnAllTemplates(): void
     {
         // Arrange
@@ -132,9 +117,6 @@ class ConfigurableBundlePageSearchFacadeTest extends Unit
         $this->assertCount($this->tester->getConfigurableBundleTemplatesCount(), $configurableBundleTemplateCollectionTransfer->getConfigurableBundleTemplates());
     }
 
-    /**
-     * @return void
-     */
     public function testGetConfigurableBundleTemplateCollectionWillReturnTemplatesByFilter(): void
     {
         // Arrange
@@ -149,9 +131,6 @@ class ConfigurableBundlePageSearchFacadeTest extends Unit
         $this->assertCount(1, $configurableBundleTemplateCollectionTransfer->getConfigurableBundleTemplates());
     }
 
-    /**
-     * @return void
-     */
     public function testGetConfigurableBundleTemplateCollectionReturnsEmptyCollection(): void
     {
         // Arrange

@@ -19,9 +19,6 @@ use Spryker\Zed\Kernel\Communication\AbstractCommunicationFactory;
  */
 class ConfigurableBundlePageSearchCommunicationFactory extends AbstractCommunicationFactory
 {
-    /**
-     * @return \Spryker\Zed\ConfigurableBundlePageSearch\Dependency\Facade\ConfigurableBundlePageSearchToEventBehaviorFacadeInterface
-     */
     public function getEventBehaviorFacade(): ConfigurableBundlePageSearchToEventBehaviorFacadeInterface
     {
         return $this->getProvidedDependency(ConfigurableBundlePageSearchDependencyProvider::FACADE_EVENT_BEHAVIOR);

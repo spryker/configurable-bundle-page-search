@@ -24,10 +24,6 @@ class ConfigurableBundleTemplatePageSearchExpander implements ConfigurableBundle
      */
     protected $configurableBundleTemplatePageDataExpanderPlugins;
 
-    /**
-     * @param \Spryker\Zed\ConfigurableBundlePageSearch\Dependency\Facade\ConfigurableBundlePageSearchToProductImageFacadeInterface $productImageFacade
-     * @param array $configurableBundleTemplatePageDataExpanderPlugins
-     */
     public function __construct(
         ConfigurableBundlePageSearchToProductImageFacadeInterface $productImageFacade,
         array $configurableBundleTemplatePageDataExpanderPlugins
@@ -36,12 +32,6 @@ class ConfigurableBundleTemplatePageSearchExpander implements ConfigurableBundle
         $this->productImageFacade = $productImageFacade;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplateTransfer $configurableBundleTemplateTransfer
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplatePageSearchTransfer $configurableBundleTemplatePageSearchTransfer
-     *
-     * @return \Generated\Shared\Transfer\ConfigurableBundleTemplatePageSearchTransfer
-     */
     public function expand(
         ConfigurableBundleTemplateTransfer $configurableBundleTemplateTransfer,
         ConfigurableBundleTemplatePageSearchTransfer $configurableBundleTemplatePageSearchTransfer
@@ -59,12 +49,6 @@ class ConfigurableBundleTemplatePageSearchExpander implements ConfigurableBundle
         return $configurableBundleTemplatePageSearchTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplateTransfer $configurableBundleTemplateTransfer
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplatePageSearchTransfer $configurableBundleTemplatePageSearchTransfer
-     *
-     * @return \Generated\Shared\Transfer\ConfigurableBundleTemplatePageSearchTransfer
-     */
     protected function executeConfigurableBundleTemplatePageDataExpanderPlugins(
         ConfigurableBundleTemplateTransfer $configurableBundleTemplateTransfer,
         ConfigurableBundleTemplatePageSearchTransfer $configurableBundleTemplatePageSearchTransfer
@@ -79,12 +63,6 @@ class ConfigurableBundleTemplatePageSearchExpander implements ConfigurableBundle
         return $configurableBundleTemplatePageSearchTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplateTransfer $configurableBundleTemplateTransfer
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplatePageSearchTransfer $configurableBundleTemplatePageSearchTransfer
-     *
-     * @return \Generated\Shared\Transfer\ConfigurableBundleTemplatePageSearchTransfer
-     */
     protected function expandConfigurableBundleTemplatePageSearchTransferWithImages(
         ConfigurableBundleTemplateTransfer $configurableBundleTemplateTransfer,
         ConfigurableBundleTemplatePageSearchTransfer $configurableBundleTemplatePageSearchTransfer
@@ -105,11 +83,6 @@ class ConfigurableBundleTemplatePageSearchExpander implements ConfigurableBundle
         return $configurableBundleTemplatePageSearchTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductImageSetTransfer $productImageSetTransfer
-     *
-     * @return array
-     */
     protected function getImagesArrayFromImageSetTransfer(ProductImageSetTransfer $productImageSetTransfer): array
     {
         $images = [];

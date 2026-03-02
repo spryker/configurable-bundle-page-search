@@ -32,18 +32,12 @@ class ConfigurableBundleTemplateConfigurableBundlePageSearchUnpublishListenerTes
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     public function setUp(): void
     {
         parent::setUp();
         $this->tester->setDependencies();
     }
 
-    /**
-     * @return void
-     */
     public function testConfigurableBundleTemplateUnpublishListenerUnpublishesData(): void
     {
         // Arrange

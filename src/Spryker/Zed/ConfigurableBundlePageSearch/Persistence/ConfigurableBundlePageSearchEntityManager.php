@@ -16,11 +16,6 @@ use Spryker\Zed\Kernel\Persistence\AbstractEntityManager;
  */
 class ConfigurableBundlePageSearchEntityManager extends AbstractEntityManager implements ConfigurableBundlePageSearchEntityManagerInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplatePageSearchTransfer $configurableBundleTemplatePageSearchTransfer
-     *
-     * @return void
-     */
     public function createConfigurableBundlePageSearch(ConfigurableBundleTemplatePageSearchTransfer $configurableBundleTemplatePageSearchTransfer): void
     {
         $configurableBundleTemplatePageSearchEntity = new SpyConfigurableBundleTemplatePageSearch();
@@ -29,11 +24,6 @@ class ConfigurableBundlePageSearchEntityManager extends AbstractEntityManager im
         $configurableBundleTemplatePageSearchEntity->save();
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplatePageSearchTransfer $configurableBundleTemplatePageSearchTransfer
-     *
-     * @return void
-     */
     public function updateConfigurableBundlePageSearch(ConfigurableBundleTemplatePageSearchTransfer $configurableBundleTemplatePageSearchTransfer): void
     {
         $configurableBundleTemplatePageSearchEntity = $this->getFactory()
@@ -48,11 +38,6 @@ class ConfigurableBundlePageSearchEntityManager extends AbstractEntityManager im
         $configurableBundleTemplatePageSearchEntity->save();
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplatePageSearchTransfer $configurableBundleTemplatePageSearchTransfer
-     *
-     * @return void
-     */
     public function deleteConfigurableBundlePageSearch(ConfigurableBundleTemplatePageSearchTransfer $configurableBundleTemplatePageSearchTransfer): void
     {
         $configurableBundleTemplatePageSearchEntity = $this->getFactory()

@@ -78,17 +78,11 @@ class ConfigurableBundlePageSearchBusinessTester extends Actor
         return $configurableBundleTemplateTranslationTransfers;
     }
 
-    /**
-     * @return int
-     */
     public function getConfigurableBundleTemplatesCount(): int
     {
         return SpyConfigurableBundleTemplateQuery::create()->count();
     }
 
-    /**
-     * @return void
-     */
     public function setDependencies(): void
     {
         $this->setDependency(QueueDependencyProvider::QUEUE_ADAPTERS, function (Container $container) {
@@ -101,9 +95,6 @@ class ConfigurableBundlePageSearchBusinessTester extends Actor
         $this->setSearchPageMapPluginsDependency();
     }
 
-    /**
-     * @return void
-     */
     protected function setSearchPageMapPluginsDependency(): void
     {
         $this->setDependency(SearchDependencyProvider::PLUGIN_SEARCH_PAGE_MAPS, function () {

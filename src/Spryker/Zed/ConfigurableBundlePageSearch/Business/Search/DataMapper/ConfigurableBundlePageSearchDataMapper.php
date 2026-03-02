@@ -41,12 +41,6 @@ class ConfigurableBundlePageSearchDataMapper implements ConfigurableBundlePageSe
         $this->underscoreToDashFilter = $underscoreToDashFilter;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplatePageSearchTransfer $configurableBundleTemplatePageSearchTransfer
-     * @param \Generated\Shared\Transfer\LocaleTransfer $localeTransfer
-     *
-     * @return array
-     */
     public function mapConfigurableBundleTemplatePageSearchTransferToSearchData(
         ConfigurableBundleTemplatePageSearchTransfer $configurableBundleTemplatePageSearchTransfer,
         LocaleTransfer $localeTransfer
@@ -75,13 +69,6 @@ class ConfigurableBundlePageSearchDataMapper implements ConfigurableBundlePageSe
         return $result;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\PageMapTransfer $pageMapTransfer
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplatePageSearchTransfer $configurableBundleTemplatePageSearchTransfer
-     * @param \Generated\Shared\Transfer\LocaleTransfer $localeTransfer
-     *
-     * @return \Generated\Shared\Transfer\PageMapTransfer
-     */
     protected function expandPageMapWithPlugins(
         PageMapTransfer $pageMapTransfer,
         ConfigurableBundleTemplatePageSearchTransfer $configurableBundleTemplatePageSearchTransfer,

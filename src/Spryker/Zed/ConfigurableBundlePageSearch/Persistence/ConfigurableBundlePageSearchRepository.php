@@ -24,11 +24,6 @@ use Spryker\Zed\Kernel\Persistence\AbstractRepository;
  */
 class ConfigurableBundlePageSearchRepository extends AbstractRepository implements ConfigurableBundlePageSearchRepositoryInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplatePageSearchFilterTransfer $configurableBundleTemplatePageSearchFilterTransfer
-     *
-     * @return \Generated\Shared\Transfer\ConfigurableBundleTemplatePageSearchCollectionTransfer
-     */
     public function getConfigurableBundleTemplatePageSearchCollection(
         ConfigurableBundleTemplatePageSearchFilterTransfer $configurableBundleTemplatePageSearchFilterTransfer
     ): ConfigurableBundleTemplatePageSearchCollectionTransfer {
@@ -56,11 +51,6 @@ class ConfigurableBundlePageSearchRepository extends AbstractRepository implemen
         return $configurableBundleTemplatePageSearchCollectionTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\FilterTransfer $filterTransfer
-     *
-     * @return \Generated\Shared\Transfer\ConfigurableBundleTemplateCollectionTransfer
-     */
     public function getConfigurableBundleTemplateCollection(FilterTransfer $filterTransfer): ConfigurableBundleTemplateCollectionTransfer
     {
         $configurableBundleTemplatePropelQuery = $this->getFactory()
@@ -83,12 +73,6 @@ class ConfigurableBundlePageSearchRepository extends AbstractRepository implemen
         return $configurableBundleTemplateCollectionTransfer;
     }
 
-    /**
-     * @param \Orm\Zed\ConfigurableBundlePageSearch\Persistence\SpyConfigurableBundleTemplatePageSearchQuery $configurableBundleTemplatePageSearchQuery
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplatePageSearchFilterTransfer $configurableBundleTemplatePageSearchFilterTransfer
-     *
-     * @return \Orm\Zed\ConfigurableBundlePageSearch\Persistence\SpyConfigurableBundleTemplatePageSearchQuery
-     */
     protected function setConfigurableBundlePageSearchFilters(
         SpyConfigurableBundleTemplatePageSearchQuery $configurableBundleTemplatePageSearchQuery,
         ConfigurableBundleTemplatePageSearchFilterTransfer $configurableBundleTemplatePageSearchFilterTransfer

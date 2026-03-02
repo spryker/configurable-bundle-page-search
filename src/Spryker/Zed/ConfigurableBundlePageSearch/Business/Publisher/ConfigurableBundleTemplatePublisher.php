@@ -48,13 +48,6 @@ class ConfigurableBundleTemplatePublisher implements ConfigurableBundleTemplateP
      */
     protected $configurableBundleTemplatePageSearchExpander;
 
-    /**
-     * @param \Spryker\Zed\ConfigurableBundlePageSearch\Dependency\Facade\ConfigurableBundlePageSearchToConfigurableBundleFacadeInterface $configurableBundleFacade
-     * @param \Spryker\Zed\ConfigurableBundlePageSearch\Persistence\ConfigurableBundlePageSearchRepositoryInterface $configurableBundlePageSearchRepository
-     * @param \Spryker\Zed\ConfigurableBundlePageSearch\Persistence\ConfigurableBundlePageSearchEntityManagerInterface $configurableBundlePageSearchEntityManager
-     * @param \Spryker\Zed\ConfigurableBundlePageSearch\Business\Mapper\ConfigurableBundleTemplatePageSearchMapperInterface $configurableBundleTemplatePageSearchMapper
-     * @param \Spryker\Zed\ConfigurableBundlePageSearch\Business\Expander\ConfigurableBundleTemplatePageSearchExpanderInterface $configurableBundleTemplatePageSearchExpander
-     */
     public function __construct(
         ConfigurableBundlePageSearchToConfigurableBundleFacadeInterface $configurableBundleFacade,
         ConfigurableBundlePageSearchRepositoryInterface $configurableBundlePageSearchRepository,
@@ -172,11 +165,6 @@ class ConfigurableBundleTemplatePublisher implements ConfigurableBundleTemplateP
         }
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplatePageSearchTransfer $configurableBundleTemplatePageSearchTransfer
-     *
-     * @return void
-     */
     protected function storeSingleConfigurableBundlePageSearch(ConfigurableBundleTemplatePageSearchTransfer $configurableBundleTemplatePageSearchTransfer): void
     {
         if (!$configurableBundleTemplatePageSearchTransfer->getIdConfigurableBundleTemplatePageSearch()) {

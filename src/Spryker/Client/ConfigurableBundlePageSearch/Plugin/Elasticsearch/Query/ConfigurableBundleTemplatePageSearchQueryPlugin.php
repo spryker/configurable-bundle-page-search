@@ -40,9 +40,6 @@ class ConfigurableBundleTemplatePageSearchQueryPlugin extends AbstractPlugin imp
      */
     protected $searchContextTransfer;
 
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplatePageSearchRequestTransfer $configurableBundleTemplatePageSearchRequestTransfer
-     */
     public function __construct(ConfigurableBundleTemplatePageSearchRequestTransfer $configurableBundleTemplatePageSearchRequestTransfer)
     {
         $this->configurableBundleTemplatePageSearchRequestTransfer = $configurableBundleTemplatePageSearchRequestTransfer;
@@ -94,9 +91,6 @@ class ConfigurableBundleTemplatePageSearchQueryPlugin extends AbstractPlugin imp
         $this->searchContextTransfer = $searchContextTransfer;
     }
 
-    /**
-     * @return \Elastica\Query
-     */
     protected function createSearchQuery(): Query
     {
         $query = new Query();
@@ -107,11 +101,6 @@ class ConfigurableBundleTemplatePageSearchQueryPlugin extends AbstractPlugin imp
         return $query;
     }
 
-    /**
-     * @param \Elastica\Query $baseQuery
-     *
-     * @return \Elastica\Query
-     */
     protected function setQuery(Query $baseQuery): Query
     {
         $boolQuery = new BoolQuery();
@@ -120,11 +109,6 @@ class ConfigurableBundleTemplatePageSearchQueryPlugin extends AbstractPlugin imp
         return $baseQuery->setQuery($boolQuery);
     }
 
-    /**
-     * @param \Elastica\Query\BoolQuery $boolQuery
-     *
-     * @return \Elastica\Query\BoolQuery
-     */
     protected function setTypeFilter(BoolQuery $boolQuery): BoolQuery
     {
         $typeFilter = $this->getMatchQuery()
@@ -133,9 +117,6 @@ class ConfigurableBundleTemplatePageSearchQueryPlugin extends AbstractPlugin imp
         return $boolQuery->addMust($typeFilter);
     }
 
-    /**
-     * @return void
-     */
     protected function setupDefaultSearchContext(): void
     {
         $searchContextTransfer = new SearchContextTransfer();
@@ -144,9 +125,6 @@ class ConfigurableBundleTemplatePageSearchQueryPlugin extends AbstractPlugin imp
         $this->searchContextTransfer = $searchContextTransfer;
     }
 
-    /**
-     * @return bool
-     */
     protected function hasSearchContext(): bool
     {
         return (bool)$this->searchContextTransfer;

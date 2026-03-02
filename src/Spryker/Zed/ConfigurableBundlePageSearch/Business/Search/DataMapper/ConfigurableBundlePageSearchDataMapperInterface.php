@@ -12,12 +12,6 @@ use Generated\Shared\Transfer\LocaleTransfer;
 
 interface ConfigurableBundlePageSearchDataMapperInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplatePageSearchTransfer $configurableBundleTemplatePageSearchTransfer
-     * @param \Generated\Shared\Transfer\LocaleTransfer $localeTransfer
-     *
-     * @return array
-     */
     public function mapConfigurableBundleTemplatePageSearchTransferToSearchData(
         ConfigurableBundleTemplatePageSearchTransfer $configurableBundleTemplatePageSearchTransfer,
         LocaleTransfer $localeTransfer

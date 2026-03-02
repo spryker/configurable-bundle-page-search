@@ -27,10 +27,6 @@ class ConfigurableBundleTemplateUnpublisher implements ConfigurableBundleTemplat
      */
     protected $configurableBundlePageSearchEntityManager;
 
-    /**
-     * @param \Spryker\Zed\ConfigurableBundlePageSearch\Persistence\ConfigurableBundlePageSearchRepositoryInterface $configurableBundlePageSearchRepository
-     * @param \Spryker\Zed\ConfigurableBundlePageSearch\Persistence\ConfigurableBundlePageSearchEntityManagerInterface $configurableBundlePageSearchEntityManager
-     */
     public function __construct(
         ConfigurableBundlePageSearchRepositoryInterface $configurableBundlePageSearchRepository,
         ConfigurableBundlePageSearchEntityManagerInterface $configurableBundlePageSearchEntityManager
@@ -55,11 +51,6 @@ class ConfigurableBundleTemplateUnpublisher implements ConfigurableBundleTemplat
         });
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplatePageSearchCollectionTransfer $configurableBundleTemplatePageSearchCollectionTransfer
-     *
-     * @return void
-     */
     protected function executeUnpublishTransaction(
         ConfigurableBundleTemplatePageSearchCollectionTransfer $configurableBundleTemplatePageSearchCollectionTransfer
     ): void {

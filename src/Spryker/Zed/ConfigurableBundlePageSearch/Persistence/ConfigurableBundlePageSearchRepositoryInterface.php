@@ -14,19 +14,9 @@ use Generated\Shared\Transfer\FilterTransfer;
 
 interface ConfigurableBundlePageSearchRepositoryInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplatePageSearchFilterTransfer $configurableBundleTemplatePageSearchFilterTransfer
-     *
-     * @return \Generated\Shared\Transfer\ConfigurableBundleTemplatePageSearchCollectionTransfer
-     */
     public function getConfigurableBundleTemplatePageSearchCollection(
         ConfigurableBundleTemplatePageSearchFilterTransfer $configurableBundleTemplatePageSearchFilterTransfer
     ): ConfigurableBundleTemplatePageSearchCollectionTransfer;
 
-    /**
-     * @param \Generated\Shared\Transfer\FilterTransfer $filterTransfer
-     *
-     * @return \Generated\Shared\Transfer\ConfigurableBundleTemplateCollectionTransfer
-     */
     public function getConfigurableBundleTemplateCollection(FilterTransfer $filterTransfer): ConfigurableBundleTemplateCollectionTransfer;
 }

@@ -34,18 +34,12 @@ class ProductImageSetConfigurableBundlePageSearchPublishListenerTest extends Uni
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     public function setUp(): void
     {
         parent::setUp();
         $this->tester->setDependencies();
     }
 
-    /**
-     * @return void
-     */
     public function testConfigurableBundleTemplateProductImageSetPublishListenerPublishesData(): void
     {
         // Arrange

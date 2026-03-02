@@ -28,9 +28,6 @@ class ConfigurableBundlePageSearchFactory extends AbstractFactory
         return new ConfigurableBundleTemplatePageSearchQueryPlugin($configurableBundleTemplatePageSearchRequestTransfer);
     }
 
-    /**
-     * @return \Spryker\Client\ConfigurableBundlePageSearch\Dependency\Client\ConfigurableBundlePageSearchToSearchClientInterface
-     */
     public function getSearchClient(): ConfigurableBundlePageSearchToSearchClientInterface
     {
         return $this->getProvidedDependency(ConfigurableBundlePageSearchDependencyProvider::CLIENT_SEARCH);

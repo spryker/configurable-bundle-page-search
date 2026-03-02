@@ -80,9 +80,6 @@ class ConfigurableBundlePageSearchCommunicationTester extends Actor
         return $configurableBundleTemplateTranslationTransfers;
     }
 
-    /**
-     * @return \Spryker\Zed\Event\Dependency\Plugin\EventBulkHandlerInterface
-     */
     public function createConfigurableBundleTemplatePublishListener(): EventBulkHandlerInterface
     {
         $configurableBundleTemplatePublishListener = new ConfigurableBundleTemplateConfigurableBundlePageSearchPublishListener();
@@ -91,9 +88,6 @@ class ConfigurableBundlePageSearchCommunicationTester extends Actor
         return $configurableBundleTemplatePublishListener;
     }
 
-    /**
-     * @return \Spryker\Zed\Event\Dependency\Plugin\EventBulkHandlerInterface
-     */
     public function createConfigurableBundleTemplateUnpublishListener(): EventBulkHandlerInterface
     {
         $configurableBundleTemplateUnpublishListener = new ConfigurableBundleTemplateConfigurableBundlePageSearchUnpublishListener();
@@ -102,9 +96,6 @@ class ConfigurableBundlePageSearchCommunicationTester extends Actor
         return $configurableBundleTemplateUnpublishListener;
     }
 
-    /**
-     * @return \Spryker\Zed\Event\Dependency\Plugin\EventBulkHandlerInterface
-     */
     public function createProductImageSetConfigurableBundlePageSearchPublishListener(): EventBulkHandlerInterface
     {
         $configurableBundleTemplateUnpublishListener = new ProductImageSetConfigurableBundlePageSearchPublishListener();
@@ -113,9 +104,6 @@ class ConfigurableBundlePageSearchCommunicationTester extends Actor
         return $configurableBundleTemplateUnpublishListener;
     }
 
-    /**
-     * @return void
-     */
     public function setDependencies(): void
     {
         $this->setDependency(QueueDependencyProvider::QUEUE_ADAPTERS, function (Container $container) {
@@ -128,9 +116,6 @@ class ConfigurableBundlePageSearchCommunicationTester extends Actor
         $this->setSearchPageMapPluginsDependency();
     }
 
-    /**
-     * @return void
-     */
     protected function setSearchPageMapPluginsDependency(): void
     {
         $this->setDependency(SearchDependencyProvider::PLUGIN_SEARCH_PAGE_MAPS, function () {

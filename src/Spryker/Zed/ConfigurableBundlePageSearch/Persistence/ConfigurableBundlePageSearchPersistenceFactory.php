@@ -19,17 +19,11 @@ use Spryker\Zed\Kernel\Persistence\AbstractPersistenceFactory;
  */
 class ConfigurableBundlePageSearchPersistenceFactory extends AbstractPersistenceFactory
 {
-    /**
-     * @return \Orm\Zed\ConfigurableBundlePageSearch\Persistence\SpyConfigurableBundleTemplatePageSearchQuery
-     */
     public function getConfigurableBundlePageSearchQuery(): SpyConfigurableBundleTemplatePageSearchQuery
     {
         return SpyConfigurableBundleTemplatePageSearchQuery::create();
     }
 
-    /**
-     * @return \Orm\Zed\ConfigurableBundle\Persistence\SpyConfigurableBundleTemplateQuery
-     */
     public function getConfigurableBundleTemplatePropelQuery(): SpyConfigurableBundleTemplateQuery
     {
         return $this->getProvidedDependency(ConfigurableBundlePageSearchDependencyProvider::PROPEL_QUERY_CONFIGURABLE_BUNDLE_TEMPLATE);

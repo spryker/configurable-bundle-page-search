@@ -13,13 +13,6 @@ use Generated\Shared\Transfer\LocaleTransfer;
 
 interface ConfigurableBundleTemplatePageSearchMapperInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplateTransfer $configurableBundleTemplateTransfer
-     * @param \Generated\Shared\Transfer\LocaleTransfer $localeTransfer
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplatePageSearchTransfer $configurableBundleTemplatePageSearchTransfer
-     *
-     * @return \Generated\Shared\Transfer\ConfigurableBundleTemplatePageSearchTransfer
-     */
     public function mapConfigurableBundleTemplateTransferToPageSearchTransfer(
         ConfigurableBundleTemplateTransfer $configurableBundleTemplateTransfer,
         LocaleTransfer $localeTransfer,
