@@ -43,4 +43,14 @@ class ConfigurableBundlePageSearchConfig extends AbstractBundleConfig
      * @var string
      */
     public const CONFIGURABLE_BUNDLE_SEARCH_ERROR_QUEUE = 'sync.search.configurable_bundle.error';
+
+    /**
+     * Specification:
+     * - Queue name used for configurable bundle page search publish events.
+     *
+     * @api
+     *
+     * @var string
+     */
+    public const string PUBLISH_CONFIGURABLE_BUNDLE_PAGE_QUEUE = 'publish.configurable_bundle_page';
 }
