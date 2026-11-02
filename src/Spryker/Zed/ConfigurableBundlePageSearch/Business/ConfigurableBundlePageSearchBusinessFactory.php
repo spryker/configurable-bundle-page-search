@@ -107,6 +107,9 @@ class ConfigurableBundlePageSearchBusinessFactory extends AbstractBusinessFactor
         return $this->getProvidedDependency(ConfigurableBundlePageSearchDependencyProvider::PLUGINS_CONFIGURABLE_BUNDLE_TEMPLATE_MAP_EXPANDER);
     }
 
+    /**
+     * @return \Laminas\Filter\FilterInterface<string|array<array-key, string|mixed>>
+     */
     public function createUnderscoreToDashFilter(): FilterInterface
     {
         return new UnderscoreToDash();

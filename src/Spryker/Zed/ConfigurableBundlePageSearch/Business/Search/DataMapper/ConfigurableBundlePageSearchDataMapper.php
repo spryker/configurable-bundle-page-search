@@ -25,13 +25,13 @@ class ConfigurableBundlePageSearchDataMapper implements ConfigurableBundlePageSe
     protected $configurableBundleTemplatePageMapExpanderPlugins;
 
     /**
-     * @var \Laminas\Filter\FilterInterface
+     * @var \Laminas\Filter\FilterInterface<string|array<array-key, string|mixed>>
      */
     protected $underscoreToDashFilter;
 
     /**
      * @param array<\Spryker\Zed\ConfigurableBundlePageSearchExtension\Dependency\Plugin\ConfigurableBundleTemplateMapExpanderPluginInterface> $configurableBundleTemplatePageMapExpanderPlugins
-     * @param \Laminas\Filter\FilterInterface $underscoreToDashFilter
+     * @param \Laminas\Filter\FilterInterface<string|array<array-key, string|mixed>> $underscoreToDashFilter
      */
     public function __construct(
         array $configurableBundleTemplatePageMapExpanderPlugins,
@@ -95,6 +95,7 @@ class ConfigurableBundlePageSearchDataMapper implements ConfigurableBundlePageSe
             return $key;
         }
 
+        /** @var string $normalizedKey */
         $normalizedKey = $this->underscoreToDashFilter->filter($key);
 
         if (in_array($normalizedKey, $pageIndexMapProperties)) {

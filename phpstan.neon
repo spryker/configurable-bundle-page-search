@@ -2,6 +2,9 @@ parameters:
     ignoreErrors:
         -
             identifier: missingType.iterableValue
+        -
+            message: '#Laminas\\Filter\\FilterInterface.+is not generic#'
+            identifier: generics.notGeneric
     level: 7
     reportUnmatchedIgnoredErrors: false
     excludePaths:
