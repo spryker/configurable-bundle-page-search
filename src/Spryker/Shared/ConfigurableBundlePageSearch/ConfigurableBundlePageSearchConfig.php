@@ -7,12 +7,12 @@
 
 namespace Spryker\Shared\ConfigurableBundlePageSearch;
 
-use Spryker\Shared\Kernel\AbstractBundleConfig;
+use Spryker\Shared\Kernel\AbstractSharedConfig;
 
 /**
  * Declares global environment configuration keys. Do not use it for other class constants.
  */
-class ConfigurableBundlePageSearchConfig extends AbstractBundleConfig
+class ConfigurableBundlePageSearchConfig extends AbstractSharedConfig
 {
     /**
      * Specification:
